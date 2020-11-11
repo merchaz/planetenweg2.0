@@ -1,34 +1,40 @@
 <template>
   <div class="home">
-    <div v-for="commute in commutes" :key="commute.person">
-      <Commute :person="commute.fields.person" :start="commute.fields.start" :destination="commute.fields.destination" />
-    </div>
+    <ul>
+      <li v-for="commute in commutes" :key="commute.name">
+        <Commute :person="commute.name" :start="commute.start" :end="commute.end" />
+      </li>
+    </ul>
+    
   </div>
 </template>
 
-
-
 <script>
-// This is my comment
 // @ is an alias to /src
-import Commute from "@/components/Commute.vue";
-import contentfulClient from "@/modules/contentful.js";
+import Commute from '@/components/Commute.vue'
+import contentful from '@/module/contentful.js'
+
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     Commute
   },
-  data: function() {
+  data: function(){
     return {
-      commutes: []
-    };
+      commutes: [
+        { name: 'Merc' , start: "steinhuse", end: "emmebrugg"},
+        { name: 'Levin' , start: "Bern", end: "emmebrugg"},
+        { name: 'Seraphine' , start: "Biel", end: "emmebrugg"}
+      ]
+    }
   },
   created: async function() {
-    let result = await contentfulClient
-      .getEntries({
-        content_type: "commute"
-      });
-    this.commutes =  result.items;
+    console.log("created done")
+    let result = await contentful.getEntries(
+    {content_type : "commute"}
+    );
+    this.commutes = result.items;
+    console.log(result)
   }
-};
+}
 </script>

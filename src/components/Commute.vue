@@ -1,9 +1,9 @@
 <template>
   <div>
       <h1>
-          {{person}}'s dogoo is mega
+          {{person}}'s commute
       </h1>
-      <p> {{person}} commutes from {{start}} to {{end}} swag</p>
+      <p> {{person}} commutes from {{start}} to {{end}} </p>
   </div>
 </template>
 
