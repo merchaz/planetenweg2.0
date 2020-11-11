@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>
-          {{person}}'s COMMUTE
+          {{person}}'s COMMUTE is mega
       </h1>
       <p> {{person}} commutes from {{start}} to {{end}} </p>
   </div>
