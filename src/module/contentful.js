@@ -1,8 +1,8 @@
 import { createClient } from "contentful"
 
-var client = createClient({
+var contentfulClient = createClient({
     space: 'ucvpwxypvf2r',
     accessToken: 'ujfs4nSae2-rRcFu5ypvCOufTvJES3DZOnl4-zd95Wk'
 })
 
-export default client
+export default contentfulClient;
