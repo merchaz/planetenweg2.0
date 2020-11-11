@@ -6,7 +6,10 @@
   </div>
 </template>
 
+
+
 <script>
+// This is my comment
 // @ is an alias to /src
 import Commute from "@/components/Commute.vue";
 import contentfulClient from "@/modules/contentful.js";
