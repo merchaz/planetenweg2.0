@@ -39,6 +39,13 @@ var mercsHome = {
     urX: 8.483493,
     urY: 47.192853
 }
+
+var levinsHome = {
+    olX: 8.285036,
+    olY: 47.073229,
+    urX: 8.285633,
+    urY: 47.072837
+}
 export default {
   name: 'UserLocation',
   methods: {
@@ -47,6 +54,11 @@ export default {
             position => {
                 console.log(position.coords.longitude);
                 document.getElementById("locLabel").innerHTML  = "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude;
+                if(this.isInside(position.coords.longitude, position.coords.latitude, levinsHome.olX, levinsHome.olY, levinsHome.urX, levinsHome.urY)){
+                    alert("youre at levins place")
+                } else {
+                    alert("youre not at levins place")
+                }
                 if(this.isInside(position.coords.longitude, position.coords.latitude, isasHome.olX, isasHome.olY, isasHome.urX, isasHome.urY)){
                     alert("youre at isas place")
                 } else {
@@ -56,7 +68,7 @@ export default {
                     alert("youre at mercs place")
                 } else {
                     alert("youre not at mercs place")
-                }
+                }                
             },
             error => {
                 console.log("rip");
