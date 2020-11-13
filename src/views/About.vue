@@ -6,9 +6,7 @@
 
 <style>
 
-body{
-  background-color: blue;
-}
+
 .about {
   background-color: white;
 }
