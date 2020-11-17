@@ -1,9 +1,17 @@
 <template>
   <div class="home">
     <ul>
-      <li v-for="commute in commutes" :key="commute.name">
-        <Commute :person="commute.name" :start="commute.start" :end="commute.end" />
-      </li>
+      <!-- <li v-for="commute in commutes" :key="commute.name"> -->
+        <!-- <Commute :person="commute.name" :start="commute.start" :end="commute.end" /> -->
+        <li><router-link to="/Start">Start</router-link></li>
+        <li><router-link to="/MeineSammlung">Meine Sammlung</router-link></li>
+        <li><router-link to="/Walking">Walking</router-link></li>
+        <li><router-link to="/Unlock">Location</router-link></li>
+        <li><router-link to="/sonne">Sonne</router-link></li>
+        <li><router-link to="/merkur">Merkur</router-link></li>
+        <li><router-link to="/erdemond">Erde und Mond</router-link></li>
+        <li><router-link to="/venus">Venus</router-link></li>
+        <li><router-link to="/map">Map</router-link></li>
     </ul>
     
   </div>
@@ -11,13 +19,13 @@
 
 <script>
 // @ is an alias to /src
-import Commute from '@/components/Commute.vue'
+//import Commute from '@/components/Commute.vue'
 import contentful from '@/module/contentful.js'
 
 export default {
   name: 'Home',
   components: {
-    Commute
+    //Commute
   },
   data: function(){
     return {

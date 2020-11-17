@@ -11,6 +11,7 @@
     .container {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .container div {
@@ -21,17 +22,6 @@
 
 
 <script>
-// y            x
-// ul 47.328758, 8.573194
-// ur 47.328758, 8.573721
-// ol 47.328997, 8.573194
-// or 47.328997, 8.573721
-var isasHome = {
-    olX: 8.573194,
-    olY: 47.328997,
-    urX: 8.573721,
-    urY: 47.328758
-}
 
 var mercsHome = {
     olX: 8.482823,
@@ -58,12 +48,7 @@ export default {
                     alert("youre at levins place")
                 } else {
                     alert("youre not at levins place")
-                }
-                if(this.isInside(position.coords.longitude, position.coords.latitude, isasHome.olX, isasHome.olY, isasHome.urX, isasHome.urY)){
-                    alert("youre at isas place")
-                } else {
-                    alert("youre not at isas place")
-                }
+                }    
                 if(this.isInside(position.coords.longitude, position.coords.latitude, mercsHome.olX, mercsHome.olY, mercsHome.urX, mercsHome.urY)){
                     alert("youre at mercs place")
                 } else {
