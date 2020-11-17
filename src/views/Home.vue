@@ -4,6 +4,7 @@
       <!-- <li v-for="commute in commutes" :key="commute.name"> -->
         <!-- <Commute :person="commute.name" :start="commute.start" :end="commute.end" /> -->
         <li><router-link to="/Start">Start</router-link></li>
+        <li><router-link to="/Planeteninfo">Planeteninfo</router-link></li>
         <li><router-link to="/MeineSammlung">Meine Sammlung</router-link></li>
         <li><router-link to="/Walking">Walking</router-link></li>
         <li><router-link to="/Unlock">Location</router-link></li>
