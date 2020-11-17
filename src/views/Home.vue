@@ -7,11 +7,9 @@
         <li><router-link to="/Planeteninfo">Planeteninfo</router-link></li>
         <li><router-link to="/MeineSammlung">Meine Sammlung</router-link></li>
         <li><router-link to="/Walking">Walking</router-link></li>
-        <li><router-link to="/Unlock">Location</router-link></li>
+        <li><router-link to="/Unlock">Unlock</router-link></li>
         <li><router-link to="/sonne">Sonne</router-link></li>
-        <li><router-link to="/merkur">Merkur</router-link></li>
         <li><router-link to="/erdemond">Erde und Mond</router-link></li>
-        <li><router-link to="/venus">Venus</router-link></li>
         <li><router-link to="/map">Map</router-link></li>
     </ul>
     

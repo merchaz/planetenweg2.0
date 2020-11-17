@@ -88,15 +88,6 @@ const routes = [{
             import ( /* webpackChunkName: "about" */ '../components/Sonne.vue')
     },
     {
-        path: '/merkur',
-        name: 'merkur',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () =>
-            import ( /* webpackChunkName: "about" */ '../components/Merkur.vue')
-    },
-    {
         path: '/erdemond',
         name: 'erdemond',
         // route level code-splitting
@@ -104,15 +95,6 @@ const routes = [{
         // which is lazy-loaded when the route is visited.
         component: () =>
             import ( /* webpackChunkName: "about" */ '../components/ErdeMond.vue')
-    },
-    {
-        path: '/venus',
-        name: 'venus',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () =>
-            import ( /* webpackChunkName: "about" */ '../components/Venus.vue')
     }
 ]
 
