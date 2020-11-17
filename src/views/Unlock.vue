@@ -1,6 +1,8 @@
 <template>
   <div class="merkur">
-    <h1>Unlock</h1>
+    <img class="planetAsset">
+    <h1 class="unlockText">Du hast Venus entdeckt</h1>
+    <button id="erfahreMehrBtn">ERFAHRE MEHR</button>
   </div>
 </template>
 

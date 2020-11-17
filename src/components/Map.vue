@@ -2,6 +2,9 @@
   <div class="map">
     <h1>{{ msg }}</h1>
     <h1>Map</h1>
+  <div id="mapView">
+    <button id="closeMapBtn">x</button>
+  </div>
   </div>
 </template>
 
