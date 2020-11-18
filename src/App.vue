@@ -33,7 +33,8 @@ var levinsHome = {
 }
 
 var showModal = false;
-var unlockedPlanet = "";
+var unlockedPlanet = "a";
+var test = true;
 export default {
   components: { unlockPopup },
   name: 'app',
@@ -55,8 +56,9 @@ export default {
                 } else {
                     //alert("youre not at levins place")
                 }    
-                if(this.isInside(position.coords.longitude, position.coords.latitude, mercsHome.olX, mercsHome.olY, mercsHome.urX, mercsHome.urY)){
-                    unlockedPlanet = "Mercs Place";
+                if(test){//(this.isInside(position.coords.longitude, position.coords.latitude, mercsHome.olX, mercsHome.olY, mercsHome.urX, mercsHome.urY)){
+                  console.log(mercsHome);
+                    this.unlockedPlanet = "Merc's Place";
                     this.showModal = true;
                     //alert("youre at mercs place")
                 } else {
