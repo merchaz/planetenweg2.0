@@ -7,7 +7,7 @@ const routes = [{
         component: Home
     },
     {
-        path: '/Planeteninfo',
+        path: '/Planeteninfo/:planetname',
         name: 'Planeteninfo',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route

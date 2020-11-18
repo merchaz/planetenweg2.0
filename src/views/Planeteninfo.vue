@@ -2,7 +2,7 @@
   <div class="main">
     <h1>{{ msg }}</h1>
     <img class="planetAsset">
-    <h1>Planetenname</h1>
+    <h1>{{ $route.params.planetname }}</h1>
     <img class="logo">
     <div class="planetdescription">hier kommt text</div>
   </div>
