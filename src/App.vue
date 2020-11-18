@@ -7,13 +7,6 @@
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: #2c3e50;
-}
 
 #nav {
   padding: 30px;
@@ -31,4 +24,70 @@
 .maindiv{
   background-color: #b94295;
 }
+
+/* Levin */
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Emblema+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Styles */
+
+div, html, body, h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #173040;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #F2D7B6;
+}
+
+h1,h2,h3 {
+  font-family: 'Emblema One', cursive;
+  font-weight: 400;
+  text-shadow: 3px 2px 0px #9E4C4E;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 46px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.bg {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: none;
+  border: #F2D7B6 10px solid;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+}
+
+#nav {
+  display: none;
+}
+
 </style>

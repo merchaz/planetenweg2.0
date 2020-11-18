@@ -1,5 +1,5 @@
 <template>
-  <div class="merkur">
+  <div class="walking">
     <h1>Walking</h1>
     <label id="distanzLabel">51.243 Millionen km</label>
     <img id="spaceship">
