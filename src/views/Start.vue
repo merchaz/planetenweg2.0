@@ -1,8 +1,7 @@
 <template>
   <div class="bg">
-    <div class="startDiv">
       <svg class="planet" width="291" height="305" viewBox="0 0 291 305" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0)">
+
           <circle cx="242.5" cy="242.5" r="242.5" fill="#9E4C4E"/>
           <path d="M293.814 259.228C217.265 243.247 275.84 365.144 349.354 315.846C286.417 337.151 237.209 271.476 293.814 259.228Z" fill="#173040"/>
           <path d="M334.009 41.5438C268.392 17.1341 336.949 115.441 389.15 91.9443C340.963 96.8853 289.514 40.9668 334.009 41.5438Z" fill="#173040"/>
@@ -15,13 +14,13 @@
           <path d="M239.93 146.682C222.988 144.23 229.892 173.37 249.734 159.654C233.901 166.201 226.072 150.851 239.93 146.682Z" fill="#173040"/>
           <path d="M106.209 188.219C65.4459 229.552 152.321 283.508 158.645 193.364C142.619 254.229 88.2849 237.563 106.209 188.219Z" fill="#173040"/>
           <path d="M441.299 140.605C392.777 109.66 438.891 196.465 480.194 188.972C443.121 183.357 407.39 131.575 441.299 140.605Z" fill="#173040"/>
-        </g>
         <defs>
           <clipPath id="clip0">
             <rect width="291" height="305" fill="white"/>
           </clipPath>
         </defs>
       </svg>
+
 
       <div class="title">
         <h2>Beginne</h2><br>
@@ -30,7 +29,6 @@
       </div>
       <p class="paragraph">Um deine Reise im Solarsystem zu starten, musst du deine Ortungsdienste aktivieren.</p>
       <button id="startButton"><router-link to="/Walking">Start</router-link></button>
-    </div>
   </div>
 </template>
 
@@ -52,16 +50,20 @@ export default {
   }
 
   .planet {
-    position: absolute;
+    position: fixed;
     top: -7px;
     right: 0;
     transform: rotate(-90deg);
   }
 
-  .title{
+  .title {
   transform: rotate(-7.23deg);
-  margin-top: 50%;
+  margin-top: 40%;
   margin-bottom: 40%;
+  }
+
+  .paragraph {
+    text-align: center;
   }
 
 </style>

@@ -145,6 +145,7 @@ body {
   background: #173040;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   font-family: 'Roboto Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -173,6 +174,29 @@ h3 {
 
 p {
   font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+}
+
+a {
+  color: #9E4C4E;
+  text-decoration-line: none;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 40px;
+  margin-top: 5vh;
+  border: none;
+  border-radius: 12px;
+  background-color: #F2D7B6;
+  color: #9E4C4E;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration-line: none;
+  
 }
 
 .bg {
@@ -182,6 +206,9 @@ p {
   background: none;
   border: #F2D7B6 10px solid;
   display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   padding: 32px;
@@ -190,5 +217,4 @@ p {
 #nav {
   display: none;
 }
-
 </style>
