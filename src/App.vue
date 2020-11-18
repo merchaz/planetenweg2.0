@@ -58,9 +58,12 @@ export default {
                 }    
                 if(test){//(this.isInside(position.coords.longitude, position.coords.latitude, mercsHome.olX, mercsHome.olY, mercsHome.urX, mercsHome.urY)){
                   console.log(mercsHome);
-                    this.unlockedPlanet = "Merc's Place";
-                    this.showModal = true;
-                    //alert("youre at mercs place")
+                  this.unlockedPlanet = "Merc's Place";
+                  console.log(this.unlockedPlanet);
+
+                  this.showModal = true;
+                  console.log(this.showModal);
+                  //alert("youre at mercs place")
                 } else {
                     alert("youre not at mercs place")
                 }                
@@ -84,6 +87,10 @@ export default {
         } else {
             return false;
         }
+    } ,
+    closepopup(){
+      console.log("arrived");
+      this.showModal = false;
     }
   }
 }
