@@ -2,7 +2,7 @@
   <div class="startDiv">
     <h1 class="title">Beginne deine Reise</h1>
     <p class="paragraph">text text</p>
-    <button id="startButton">Start</button>
+    <button id="startButton"><router-link to="/Walking">Start</router-link></button>
   </div>
 </template>
 
