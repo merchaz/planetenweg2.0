@@ -1,6 +1,6 @@
 <template>
   <div class="popup">
-      <button id="closeBtn" @click="closeBtnPressed">test </button>
+      <button id="closeBtn" @click="closeBtnPressed">close</button>
       <img id="unlockedPlanetImg">
     <p>Du hast </p>
     <h1>{{ planetName }} </h1>
