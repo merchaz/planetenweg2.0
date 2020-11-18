@@ -1,4 +1,9 @@
+
+
 <template>
+<div id="popupOverlay" v-if="showModal">
+  <unlock-popup :planetName="unlockedPlanet"></unlock-popup>
+</div>
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/loc">Location</router-link> 
@@ -6,9 +11,12 @@
   <div id="testDiv"><label id="locLabel">click the button</label>
   <button id="locationBtn" v-on:click="locatorButtonPressed">get location</button></div>
   <router-view/>
+  
 </template>
 
+
 <script>
+import unlockPopup from './components/unlockPopup.vue';
 
 var mercsHome = {
     olX: 8.482823,
@@ -23,21 +31,34 @@ var levinsHome = {
     urX: 8.285633,
     urY: 47.072837
 }
+
+var showModal = false;
+var unlockedPlanet = "";
 export default {
+  components: { unlockPopup },
   name: 'app',
+  data: function(){
+      return {
+        showModal, unlockedPlanet
+      }
+  },
   methods: {
     locatorButtonPressed() {
         navigator.geolocation.getCurrentPosition(
             position => {
-                console.log(position.coords.longitude);
+                console.log(showModal);
+                console.log(unlockedPlanet);
                 document.getElementById("locLabel").innerHTML  = "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude;
                 if(this.isInside(position.coords.longitude, position.coords.latitude, levinsHome.olX, levinsHome.olY, levinsHome.urX, levinsHome.urY)){
+                    this.showModal = true;
                     alert("youre at levins place")
                 } else {
-                    alert("youre not at levins place")
+                    //alert("youre not at levins place")
                 }    
                 if(this.isInside(position.coords.longitude, position.coords.latitude, mercsHome.olX, mercsHome.olY, mercsHome.urX, mercsHome.urY)){
-                    alert("youre at mercs place")
+                    unlockedPlanet = "Mercs Place";
+                    this.showModal = true;
+                    //alert("youre at mercs place")
                 } else {
                     alert("youre not at mercs place")
                 }                
@@ -64,12 +85,6 @@ export default {
     }
   }
 }
-
-
-
-
-
-
 </script>
 
 <style>
@@ -89,6 +104,15 @@ export default {
 
 .maindiv{
   background-color: #b94295;
+}
+
+#popupOverlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #173040;
+  z-index: 2;
+  border: #F2D7B6 10px solid;
 }
 
 #locationBtn {

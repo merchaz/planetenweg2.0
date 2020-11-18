@@ -28,7 +28,7 @@
         <h3>deine</h3><br>
         <h1>Reise</h1>
       </div>
-      <p class="paragraph">Um deine Reise im Solarsystem zu starten, musst du deine Ortnungsdienste aktivieren.</p>
+      <p class="paragraph">Um deine Reise im Solarsystem zu starten, musst du deine Ortungsdienste aktivieren.</p>
       <button id="startButton"><router-link to="/Walking">Start</router-link></button>
     </div>
   </div>
