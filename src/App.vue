@@ -151,6 +151,7 @@ h3 {
 p {
   font-size: 18px;
   font-weight: 400;
+  width: 100%;
 }
 
 a {
