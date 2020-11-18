@@ -175,6 +175,11 @@ button {
   
 }
 
+.bg-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
 .bg {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -185,9 +190,78 @@ button {
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 32px;
+}
+
+.stars {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat;
+}
+
+.starsFast {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat;
+  -webkit-animation: scroll 15s linear infinite;
+  animation: scroll 15s linear infinite;
+}
+
+.starsSlow {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars2.svg") repeat;
+  -webkit-animation: scroll 30s linear infinite;
+  animation: scroll 30s linear infinite;
+}
+
+@-webkit-keyframes scroll {
+  0%{background-position: 0 -487px;
+
+  }
+  20%{
+    
+  }
+  40%{
+    
+  }
+  60%{
+    
+  }
+  80%{
+    
+  }
+  100%{
+    background-position: 0 0;
+  }
+
+}
+
+@keyframes scroll {
+    0%{
+      background-position: 0 -487px;
+      opacity: 100%;
+  }
+  20%{
+      opacity: 0%;
+  }
+  40%{
+      opacity: 100%;
+  }
+  60%{
+      opacity: 0%;
+  }
+  80%{
+      opacity: 100%;
+  }
+  100%{
+    background-position: 0 0;
+  }
 }
 
 #nav {
