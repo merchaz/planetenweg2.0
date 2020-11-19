@@ -22,23 +22,20 @@ body {
   background-size: cover;
 }
 
-.marker.Sonne.mapboxgl-marker.mapboxgl-marker-anchor-center {
-  background-image: url("/assets/Sun.png");
+.marker.Sonne {
+  background-image: url("~@/assets/Sun_withGlow.png");
 }
-.marker.sonne {
-  background-image: url("/assets/Sun.png");
+.marker.Merkur {
+  background-image: url("~@/assets/Mercury.png");
 }
-.marker.merkur {
-  background-image: url("../assets/Mercury.png");
+.marker.Venus {
+  background-image: url("~@/assets/Venus.png");
 }
-.marker.venus {
-  background-image: url("/assets/Venus.png");
+.marker.Erde {
+  background-image: url("~@/assets/Earth.png");
 }
-.marker.erde {
-  background-image: url("/assets/Earth.png");
-}
-.marker.mond {
-  background-image: url("/assets/Moon.png");
+.marker.Mond {
+  background-image: url("~@/assets/Moon.png");
 }
 </style>
 
