@@ -6,7 +6,8 @@
           <img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed">
         </div>
         <div class="planetimage">
-          <!-- <img id="unlockedPlanetImg"> -->
+          <img v-if="imgUrl" id="unlockedPlanetImg" :src="imgUrl">
+          <!-- <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url"> -->
           <!-- <img src="../assets/Moon.png"> -->
         </div>
     <div class="title">
@@ -14,7 +15,7 @@
     <h1>{{ planetName }} </h1><br>
     <h4>entdeckt</h4>
     </div>
-      <router-link v-if="mehrErfahrenLink" :to="mehrErfahrenLink"><button style="color:#f2d7b6;" id="mehrErfahrenBtn" @click="closeBtnPressed">Erfahre mehr</button></router-link>      
+      <router-link v-if="imgUrl" :to="mehrErfahrenLink"><button style="color:#f2d7b6;" id="mehrErfahrenBtn" @click="closeBtnPressed">Erfahre mehr</button></router-link>      
     </div>
   </div>
 </template>
@@ -22,17 +23,17 @@
 <script>
 
 // eslint-disable-next-line no-unused-vars
-var mehrErfahrenLink = ""
+var mehrErfahrenLink = "";
 // eslint-disable-next-line no-unused-vars
-var linkDone = false;
+var imgUrl = "";
 export default {
   name: 'unlockPopup',
   props: {
     planetName: String
   },
-  
-  created: function(){
-    this.mehrErfahrenLink = "/Planeteninfo/" + this.planetName;
+  created: function (){
+    this.imgUrl = "../assets/" + this.planetName + ".png";
+    this.mehrErfahrenLink = "/Planeteninfo/" + this.planetName;  
   },
   methods: {
     closeBtnPressed() {

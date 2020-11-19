@@ -1,11 +1,11 @@
 <template>
   <div class="sammlung">
     <h1>Meine Sammlung</h1>
-    <router-link to="/Planeteninfo/Sonne"><img class="planet Sonne" v-if="true" src="~@/assets/Sun_withGlow.png"></router-link>
-    <router-link to="/Planeteninfo/Merkur"><img class="planet Merkur" v-if="true" src="~@/assets/Mercury.png"></router-link>
+    <router-link to="/Planeteninfo/Sonne"><img class="planet Sonne" v-if="true" src="~@/assets/Sonne.png"></router-link>
+    <router-link to="/Planeteninfo/Merkur"><img class="planet Merkur" v-if="true" src="~@/assets/Merkur.png"></router-link>
     <router-link to="/Planeteninfo/Venus"><img class="planet Venus" v-if="true" src="~@/assets/Venus.png"></router-link>
-    <router-link to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Earth.png"></router-link>
-    <router-link to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Moon.png"></router-link>
+    <router-link to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Erde.png"></router-link>
+    <router-link to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Mond.png"></router-link>
   </div>
 </template>
 
@@ -71,18 +71,18 @@ a {
 }
 
 .planet.Sonne {
-  background-image: url("~@/assets/Sun_withGlow.png");
+  background-image: url("~@/assets/Sonne.png");
 }
 .planet.Merkur {
-  background-image: url("~@/assets/Mercury.png");
+  background-image: url("~@/assets/Merkur.png");
 }
 .planet.Venus {
   background-image: url("~@/assets/Venus.png");
 }
 .planet.Erde {
-  background-image: url("~@/assets/Earth.png");
+  background-image: url("~@/assets/Erde.png");
 }
 .planet.Mond {
-  background-image: url("~@/assets/Moon.png");
+  background-image: url("~@/assets/Mond.png");
 }
 </style>

@@ -5,14 +5,13 @@
       <div class="btns">
         <router-link to="/MeineSammlung"><img class="sammlungBtn" src="../assets/sammlungBtn.svg"></router-link>
         <router-link to="/Walking"><img class="closeBtn" src="../assets/closeBtn.svg"></router-link>
-      </div>
-     
-      <img class="planetAsset">
-      <h1 v-if="imgUrl">
-        {{ myPlanet.fields.planetname }}
-      </h1>
-      <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
-      <div class="planetdescription">
+      </div>     
+        <img class="planetAsset">
+        <h1 v-if="imgUrl">
+          {{ myPlanet.fields.planetname }}
+        </h1>
+        <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
+        <div class="planetdescription">
       </div>
 
       <div class="stars"></div>
@@ -27,9 +26,9 @@ import contentfulClient from "@/module/contentful.js";
 var imgUrl = "";
 export default {
   name: 'planetenView',
-  props: {
-    msg: String
-  },
+  // props: {
+  //   msg: String
+  // },
 
    data: function() {
     return {
