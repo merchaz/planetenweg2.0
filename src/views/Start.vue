@@ -12,7 +12,7 @@
 Dein Abenteuer wird 5,91 km lang sein und dir erlauben, die Planeten unseres Sonnensystems zu entdecken. Die “Raumschiff Reise” dauert etwa 2 Stunden, aber gebe dir Zeit, dich im Weltraum zu verlieren.
 (Besondere Hinweise: Einfacher Wander- bzw. Spazierweg entlang der Reuss, teilw. durch bewaldetes Gebiet.)
 Wenn du dich verloren fühlst, kannst du dich auf der Karte orientieren. Du kannst auch während deine Reise deine gesammelten Planeten im Auge behalten.</p>
-        <button id="startButton"><router-link to="/Walking">Start</router-link></button>
+        <router-link to="/Walking"><button id="startButton" @click="startBtnPressed">Start</button></router-link>
     </div>
     
 
@@ -23,6 +23,12 @@ Wenn du dich verloren fühlst, kannst du dich auf der Karte orientieren. Du kann
 
 export default {
   name: 'start',
+  methods: {
+    startBtnPressed() {
+      //Set the startflag
+      window.localStorage.setItem("StartPressed", "true");
+    }
+  }
 }
 
 </script>
