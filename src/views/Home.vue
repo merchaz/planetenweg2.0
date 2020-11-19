@@ -11,7 +11,7 @@
         <li><router-link to="/Unlock">Unlock</router-link></li>
         <li><router-link to="/sonne">Sonne</router-link></li>
         <li><router-link to="/erdemond">Erde und Mond</router-link></li>
-        <li><router-link to="/map">Map</router-link></li>
+        <li><router-link to="/showmap">Map</router-link></li>
     </ul>
     
   </div>
