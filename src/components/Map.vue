@@ -19,6 +19,9 @@ body {
 #closeBtn{
   z-index: 2;
   position: absolute;
+  margin-left: 63%;
+  margin-top: 3%;
+  padding: 32px;
 }
 
 .marker {
