@@ -3,16 +3,15 @@
     <div class="bg">
 
       <div class="btns">
-        <a href=""><img class="sammlungBtn" src="../assets/sammlungBtn.svg"> <router-link to="/sam"></router-link></a>
-        <a href=""><img class="closeBtn" src="../assets/closeBtn.svg"> <router-link to="/walking"></router-link></a>
+        <router-link to="/MeineSammlung"><img class="sammlungBtn" src="../assets/sammlungBtn.svg"></router-link>
+        <router-link to="/Walking"><img class="closeBtn" src="../assets/closeBtn.svg"></router-link>
       </div>
-
      
       <img class="planetAsset">
-      <h1>
+      <h1 v-if="imgUrl">
         {{ myPlanet.fields.planetname }}
       </h1>
-      <img class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
+      <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
       <div class="planetdescription">
       </div>
 
@@ -25,6 +24,7 @@
 <script>
 import contentfulClient from "@/module/contentful.js";
 
+var imgUrl = "";
 export default {
   name: 'planetenView',
   props: {
@@ -34,7 +34,8 @@ export default {
    data: function() {
     return {
       planet: [],
-      myPlanet: {}
+      myPlanet: {},
+      imgUrl
     };
   },
 
@@ -46,9 +47,8 @@ export default {
     this.planet =  result.items;
     this.myPlanet = result.items.find(obj => {
       return obj.fields.planetname.trim().toLowerCase() === this.$route.params.planetname.trim().toLowerCase()
-    })  
-    console.log(this.myPlanet);
-    console.log(this.myPlanet.fields.planetLogo.fields.file.url)
+    })
+    this.imgUrl = this.myPlanet.fields.planetLogo.fields.file.url;
   }
 } 
 

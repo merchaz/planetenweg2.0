@@ -51,9 +51,8 @@ body {
 <script>
 import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "mapbox-gl";
-
+// eslint-disable-next-line no-unused-vars
  var localMap;
- console.log("map: " +localMap);
 export default {
   name: "mapComp",
   props: {map: mapboxgl},

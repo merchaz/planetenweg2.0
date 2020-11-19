@@ -11,17 +11,13 @@
 
 <script>
 var unlockedPlanets = [];
+// eslint-disable-next-line no-unused-vars
 var sonneUnl, merkurUnl, venusUnl, erdeUnl, mondUnl = false; 
 var planetenStorage = window.localStorage;
 export default {
   name: 'sammlung',
-  created () {
-    console.log(sonneUnl + merkurUnl + venusUnl + erdeUnl + mondUnl)
-  },
   mounted () {
-    this.loadUnlockedPlanets();
-    console.log(unlockedPlanets);
-    
+    this.loadUnlockedPlanets();    
   },
   data: function(){
     return unlockedPlanets },

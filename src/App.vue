@@ -74,8 +74,6 @@ export default {
       if (planetenStorage.getItem("StartPressed") != null) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
-            console.log("showModal: " + showModal);
-            console.log("unlockedPlanet: " + unlockedPlanet);
             // Ist Benutzer bei Sonne?
             if (
               sonneUnl == false &&
@@ -150,7 +148,6 @@ export default {
 
             // Testing
             if (test && mondUnl == false) {
-              //(this.isInside(position.coords.longitude, position.coords.latitude, mercsHome.olX, mercsHome.olY, mercsHome.urX, mercsHome.urY)){
               this.unlockedPlanet = "Sonne";
               this.showModal = true;
               this.addEntry(unlockedPlanet);
@@ -158,7 +155,6 @@ export default {
             }
           },
           (error) => {
-            console.log("rip");
             console.log(error.message);
           }
         );
@@ -181,7 +177,6 @@ export default {
     },
     addEntry(unlockplanet) {
       if (planetenStorage.getItem(unlockplanet) == null) {
-        console.log("unlockplanet: " + unlockplanet);
         planetenStorage.setItem(unlockplanet, "planet");
       }
     },
