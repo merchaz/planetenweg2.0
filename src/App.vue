@@ -205,7 +205,6 @@ button {
   color: #9E4C4E;
   font-family: 'Roboto Mono', monospace;
   text-decoration-line: none;
-  
 }
 
 .bg-wrapper {
@@ -240,8 +239,8 @@ button {
   height: 100vh;
   width: 100vw;
   background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat;
-  -webkit-animation: scroll 15s linear infinite;
-  animation: scroll 15s linear infinite;
+  -webkit-animation: scroll 3s linear infinite;
+  animation: scroll 3s linear infinite;
 }
 
 .starsSlow {

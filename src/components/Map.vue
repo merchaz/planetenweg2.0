@@ -40,7 +40,7 @@ body {
 </style>
 
 <script>
-export default {
+/* export default {
     mounted() {
       let fontScript = document.createElement('script');
       fontScript.setAttribute('src', 'https://fonts.googleapis.com/css?family=Open+Sans');
@@ -138,5 +138,5 @@ geojson.features.forEach(function (marker) {
   index += 1;
   // add marker to map
   new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
-});
+}); */
 </script>
