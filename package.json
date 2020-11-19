@@ -8,7 +8,7 @@
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
-        "contentful": "^7.14.12",
+        "contentful": "^7.14.13",
         "core-js": "^3.6.5",
         "mapbox": "^1.0.0-beta10",
         "mapbox-gl": "^1.12.0",
