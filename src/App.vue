@@ -5,8 +5,7 @@
   <unlock-popup :planetName="unlockedPlanet"></unlock-popup>
 </div>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/loc">Location</router-link> 
+    <router-link to="/">Home</router-link> 
   </div>
   <div id="testDiv"><label id="locLabel">click the button</label>
   <button id="locationBtn" v-on:click="locatorButtonPressed">get location</button></div>
@@ -48,8 +47,8 @@ export default {
     locatorButtonPressed() {
         navigator.geolocation.getCurrentPosition(
             position => {
-                console.log(showModal);
-                console.log(unlockedPlanet);
+                console.log("showModal: "+ showModal);
+                console.log("unlockedPlanet: "+unlockedPlanet);
                 document.getElementById("locLabel").innerHTML  = "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude;
                 if(this.isInside(position.coords.longitude, position.coords.latitude, levinsHome.olX, levinsHome.olY, levinsHome.urX, levinsHome.urY)){
                     this.showModal = true;
@@ -58,10 +57,11 @@ export default {
                     //alert("youre not at levins place")
                 }    
                 if(test){//(this.isInside(position.coords.longitude, position.coords.latitude, mercsHome.olX, mercsHome.olY, mercsHome.urX, mercsHome.urY)){
-                  console.log(mercsHome);
-                  this.unlockedPlanet = "Merc's Place";
+                  console.log("mercsHome: " + mercsHome);
+                  unlockedPlanet = "Sonne";
                   this.showModal = true;
                   this.addEntry(unlockedPlanet);
+                  
                   //alert("youre at mercs place")
                 } else {
                     alert("youre not at mercs place")
@@ -80,20 +80,18 @@ export default {
         var y1 = Math.min(z2, z4);
         var y2 = Math.max(z2, z4);
         if ((x1 <= x ) && ( x <= x2) && (y1 <= y) && (y <= y2)) {
-            console.log(x1 + "," + x + "," + x2);
-            console.log(y1 + "," + y + "," + y2);
             return true;
         } else {
             return false;
         }
     } ,
     closepopup(){
-      console.log("arrived");
       this.showModal = false;
     },
     addEntry(unlockplanet){      
       if (planetenStorage.getItem(unlockplanet) == null) {
-        planetenStorage.setItem(unlockplanet, 'planet');
+        console.log("unlockplanet: " + unlockplanet)
+        planetenStorage.setItem(unlockplanet, 'splanet');
       }
     }
   }

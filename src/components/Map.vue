@@ -50,7 +50,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "mapbox-gl";
 
  var localMap;
- console.log(localMap);
+ console.log("map: " +localMap);
 export default {
   name: "mapComp",
   props: {map: mapboxgl},
