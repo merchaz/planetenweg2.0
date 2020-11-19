@@ -220,36 +220,48 @@ button {
   border: #F2D7B6 10px solid;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
   padding: 32px;
+  z-index: 5;
 }
 
 .stars {
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 100vw;
   background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat;
+  z-index: -1;
 }
 
 .starsFast {
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 100vw;
   background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat;
   -webkit-animation: scroll 3s linear infinite;
   animation: scroll 3s linear infinite;
+  z-index: -1;
 }
 
 .starsSlow {
-  position: fixed;
+  position: absolute;
+  top: 0;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars2.svg") repeat;
+  background: rgba(0, 0, 0, 0) 0px 0px url("assets/starsTest.svg") repeat;
   -webkit-animation: scroll 30s linear infinite;
   animation: scroll 30s linear infinite;
+  z-index: -1;
+}
+
+.btns{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 @-webkit-keyframes scroll {
