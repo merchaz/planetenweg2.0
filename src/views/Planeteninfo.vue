@@ -1,10 +1,19 @@
 <template>
-  <div class="main">
-    <h1>{{ msg }}</h1>
-    <img class="planetAsset">
-    <h1>{{ $route.params.planetname }}</h1>
-    <img class="logo">
-    <div class="planetdescription">hier kommt text</div>
+  <div class="bg-wrapper">
+    <div class="bg">
+      <div class="btns">
+        <a href=""><img class="sammlungBtn" src="../assets/sammlungBtn.svg"> <router-link to="/sam"></router-link></a>
+        <a href=""><img class="closeBtn" src="../assets/closeBtn.svg"> <router-link to="/walking"></router-link></a>
+      </div>
+      <h1>{{ msg }}</h1> <!-- Planetname -->
+      <img class="planetAsset">
+      <h1>{{ $route.params.planetname }}</h1>
+      <img class="logo">
+      <div class="planetdescription">hier kommt text</div>
+
+      <div class="stars"></div>
+      
+    </div>
   </div>
 </template>
 
@@ -14,23 +23,18 @@ export default {
   props: {
     msg: String
   }
-}
+} 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+
+.bg {
+  justify-content: flex-start;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.btns {
+  z-index: 15;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
