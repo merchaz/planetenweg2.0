@@ -22,51 +22,43 @@ body {
   background-size: cover;
 }
 
-.marker.sonne {
-  background-image: url("/assets/PNGs/Sun.png");
+.marker.Sonne {
+  background-image: url("~@/assets/Sun_withGlow.png");
 }
-.marker.merkur {
-  background-image: url("/assets/PNGs/Mercury.png");
+.marker.Merkur {
+  background-image: url("~@/assets/Mercury.png");
 }
-.marker.venus {
-  background-image: url("/assets/PNGs/Venus.png");
+.marker.Venus {
+  background-image: url("~@/assets/Venus.png");
 }
-.marker.erde {
-  background-image: url("/assets/PNGs/Earth.png");
+.marker.Erde {
+  background-image: url("~@/assets/Earth.png");
 }
-.marker.mond {
-  background-image: url("/assets/PNGs/Moon.png");
+.marker.Mond {
+  background-image: url("~@/assets/Moon.png");
 }
 </style>
 
 <script>
-/* export default {
-    mounted() {
-      let fontScript = document.createElement('script');
-      fontScript.setAttribute('src', 'https://fonts.googleapis.com/css?family=Open+Sans');
-      document.head.appendChild(fontScript);
+import "mapbox-gl/dist/mapbox-gl.css";
+import mapboxgl from "mapbox-gl";
 
-      let mapboxScript = document.createElement('script');
-      mapboxScript.setAttribute('src', 'https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js');
-      document.head.appendChild(mapboxScript);
+ var localMap;
+ console.log(localMap);
+export default {
+  name: "mapComp",
+  props: {map: mapboxgl},
+  mounted() {
+      mapboxgl.accessToken =
+      "pk.eyJ1Ijoic2VyYXBoaW5lIiwiYSI6ImNraDNlZ2c3ZTEzMTkydG8zMm1hdzZ3aHoifQ.aaP-5x-PK-v2CQPNxOaIvQ";
 
-      let mapboxStyleScript = document.createElement('script');
-      mapboxStyleScript.setAttribute('src', 'https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css');
-      document.head.appendChild(mapboxStyleScript);
-    }
-  }
-
-
-mapboxgl.accessToken = "pk.eyJ1Ijoic2VyYXBoaW5lIiwiYSI6ImNraDNlZ2c3ZTEzMTkydG8zMm1hdzZ3aHoifQ.aaP-5x-PK-v2CQPNxOaIvQ";
-
-var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/seraphine/ckhd6nsco25pa19mc8yrr4wq0',
-  center: [8.291631, 47.068675],
-  zoom: 16,
-});
-
-var geojson = {
+      var map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/seraphine/ckhd6nsco25pa19mc8yrr4wq0",
+      center: [8.291631, 47.068675],
+      zoom: 16,
+    });
+    var geojson = {
   type: "FeatureCollection",
   features: [
     {
@@ -77,8 +69,7 @@ var geojson = {
       },
       properties: {
         title: "Mapbox",
-        description: "sonne",
-        icon: "assets/PNGs/Sun_Try.png",
+        description: "sonne"
       },
     },
     {
@@ -89,7 +80,7 @@ var geojson = {
       },
       properties: {
         title: "Mapbox",
-        description: "merkur",
+        description: "merkur"
       },
     },
     {
@@ -100,7 +91,7 @@ var geojson = {
       },
       properties: {
         title: "Mapbox",
-        description: "venus",
+        description: "venus"
       },
     },
     {
@@ -111,7 +102,7 @@ var geojson = {
       },
       properties: {
         title: "Mapbox",
-        description: "erde",
+        description: "erde"
       },
     },
     {
@@ -122,7 +113,7 @@ var geojson = {
       },
       properties: {
         title: "Mapbox",
-        description: "mond",
+        description: "mond"
       },
     },
   ],
@@ -138,5 +129,11 @@ geojson.features.forEach(function (marker) {
   index += 1;
   // add marker to map
   new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
-}); */
+});
+  }
+}
+
+
+
+
 </script>

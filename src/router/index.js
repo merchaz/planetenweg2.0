@@ -70,7 +70,7 @@ const routes = [{
             import ( /* webpackChunkName: "about" */ '../components/UserLocation.vue')
     },
     {
-        path: '/map',
+        path: '/showmap',
         name: 'map',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
