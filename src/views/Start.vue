@@ -1,6 +1,6 @@
 <template>
   <div class="bg-wrapper">
-    <div class="bg stars">
+    <div class="bg">
         <img class="planet" src="../assets/planet2.svg">
         <div class="title">
           <h2>Beginne</h2><br>
@@ -10,6 +10,7 @@
         <p class="paragraph">Um deine Reise im Solarsystem zu starten, musst du deine Ortnungsdienste aktivieren.</p>
         <button id="startButton"><router-link to="/Walking">Start</router-link></button>
     </div>
+    <div class="stars"></div>
 
   </div>
 </template>

@@ -210,6 +210,7 @@ button {
   color: #9E4C4E;
   font-family: 'Roboto Mono', monospace;
   text-decoration-line: none;
+  z-index: 10;
 }
 
 .bg-wrapper {
