@@ -4,7 +4,10 @@
       <img class="starsbackground" src="../assets/stars2.svg">
         <div class="crossbutton">
           <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed"></router-link>
-          <img id="unlockedPlanetImg">
+        </div>
+        <div class="planetimage">
+          <!-- <img id="unlockedPlanetImg"> -->
+          <!-- <img src="../assets/Moon.png"> -->
         </div>
     <div class="title">
     <h4>Du hast </h4><br>
@@ -35,6 +38,7 @@ export default {
 <style scoped>
 .bgpopup {
   padding: 32px;
+  
 }
  .starsbackground {
     position: fixed;
@@ -57,7 +61,7 @@ button{
 }
 
 .crossbutton{
-  margin-left: 75%;
+  margin-left: 78%;
 }
 h1{
   color: #54A1BF;
@@ -65,4 +69,11 @@ h1{
 a{
   color: #F2D7B6;
 }
+.planetimage {
+  border: aqua;
+  border: #F2D7B6 1px solid;
+  position: absolute;
+
+}
+
 </style>
