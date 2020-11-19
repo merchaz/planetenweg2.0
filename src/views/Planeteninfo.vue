@@ -3,12 +3,12 @@
     <div class="bg">
 
       <div class="btns">
-        <router-link to="/MeineSammlung"><img class="sammlungBtn" src="../assets/sammlungBtn.svg"></router-link>
         <router-link to="/Walking"><img class="closeBtn" src="../assets/closeBtn.svg"></router-link>
+        <router-link to="/MeineSammlung"><img class="sammlungBtn" src="../assets/sammlungBtn.svg"></router-link>
       </div> 
 
         <img v-if="imgUrl" class="planetImg" v-bind:src="myPlanet.fields.planetImg.fields.file.url">
-        <h1 v-if="imgUrl">{{ myPlanet.fields.planetname }}</h1>
+        <h2 v-if="imgUrl">{{ myPlanet.fields.planetname }}</h2>
         <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
 
         <div v-if="imgUrl" class="planetEntdeckung"><p>{{ myPlanet.fields.planetEntdeckung }}</p></div>

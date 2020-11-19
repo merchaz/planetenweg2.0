@@ -1,22 +1,25 @@
 <template>
-  <div class="popup">
-    <div class="bgpopup">
+  <div>
+    <div class="bg">
       <!-- <img class="starsbackground" src="../assets/stars2.svg"> -->
-        <div class="crossbutton">
-          <img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed">
+        <div class="btns">
+          <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed"></router-link>
         </div>
         <div class="planetimage">
           <img v-if="imgUrl" id="unlockedPlanetImg" :src="imgUrl">
           <!-- <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url"> -->
           <!-- <img src="../assets/Moon.png"> -->
         </div>
-    <div class="title">
-    <h4>Du hast </h4><br>
-    <h1>{{ planetName }} </h1><br>
-    <h4>entdeckt</h4>
-    </div>
+        <div class="title">
+          <h4>Du hast </h4><br>
+          <h2>{{ planetName }} </h2><br>
+          <h4>entdeckt</h4>
+        </div>
       <router-link v-if="imgUrl" :to="mehrErfahrenLink"><button style="color:#f2d7b6;" id="mehrErfahrenBtn" @click="closeBtnPressed">Erfahre mehr</button></router-link>      
     </div>
+
+    <div class="stars"></div>
+
   </div>
 </template>
 
@@ -45,44 +48,34 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.bgpopup {
-  padding: 32px;
-  
-}
- .starsbackground {
-    position: fixed;
-    top: 20;
-    right: 0;
-    width:130%;
-    transform: rotate(45deg);
-  }
 
-.title{
+.bg {
+  border: none;
+}
+
+.title {
   margin-top: 70%;
-  margin-left: 0%;
   text-align: center;
 }
 
-button{
-  margin-top: 40%;
-  margin-left: 15%;
-  background-color: #9E4C4E;
+button {
+  margin-top: 30%;
+  color: #9E4C4E!important;
 }
 
-.crossbutton{
-  margin-left: 78%;
-}
-h1{
+h2 {
   color: #54A1BF;
 }
-a{
-  color: #F2D7B6;
-}
+
 .planetimage {
   border: aqua;
   border: #F2D7B6 1px solid;
   position: absolute;
+}
 
+.stars{
+  margin-left: -32px;
+  margin-top: -32px;
 }
 
 </style>
