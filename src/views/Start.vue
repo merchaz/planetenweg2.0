@@ -8,7 +8,7 @@
           <h1>Reise</h1>
         </div>
         <p class="paragraph">Um deine Reise im Solarsystem zu starten, musst du deine Ortnungsdienste aktivieren.</p>
-        <button id="startButton"><router-link to="/Walking">Start</router-link></button>
+        <router-link to="/Walking"><button id="startButton" @click="startBtnPressed">Start</button></router-link>
     </div>
     <div class="stars"></div>
 
@@ -19,6 +19,12 @@
 
 export default {
   name: 'start',
+  methods: {
+    startBtnPressed() {
+      //Set the startflag
+      window.localStorage.setItem("StartPressed", "true");
+    }
+  }
 }
 
 </script>
