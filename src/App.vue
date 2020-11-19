@@ -76,13 +76,6 @@ export default {
           (position) => {
             console.log("showModal: " + showModal);
             console.log("unlockedPlanet: " + unlockedPlanet);
-            document.getElementById("locLabel").innerHTML =
-              "Latitude: " +
-              position.coords.latitude +
-              ", " +
-              "Longitude: " +
-              position.coords.longitude;
-
             // Ist Benutzer bei Sonne?
             if (
               sonneUnl == false &&

@@ -12,7 +12,7 @@
       <h1>
         {{ myPlanet.fields.planetname }}
       </h1>
-      <img class="logo" src="{{ myPlanet.fields.planetLogo.fields.file.url }}">
+      <img class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
       <div class="planetdescription">
       </div>
 
