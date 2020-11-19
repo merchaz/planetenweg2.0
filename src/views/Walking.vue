@@ -1,5 +1,6 @@
 <template>
   <div class="bg-wrapper">
+    
     <div class="bg">
       <div class="btns">
         <router-link to="/showmap"><img id="mapBtn" src="~@/assets/mapBtn.svg"></router-link>
@@ -8,9 +9,11 @@
       <h2 id="distanzLabel">5124300 km</h2>
       <img class="astronaut " src="../assets/astronaut.svg">
       <h3 id="speedLabel">8000 km/h</h3>
+      <div class="starsSlow"></div>
     </div>
     
-    <div class="starsSlow"></div>
+    
+
 
   </div>
 </template>
@@ -35,7 +38,8 @@ export default {
   }
 
   .bg {
-    border-color: #173040;
+    border: none;
+    padding: 42px;
   }
 
 </style>

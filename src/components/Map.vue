@@ -1,51 +1,28 @@
 <template>
-  <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg"></router-link>
+  <div class="bg-wrapper">
+    <div class="bg">
+      <div class="btns">
+        <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg"></router-link>
+      </div>
+    </div>
+  </div>
   <div id="map"></div>
 </template>
           
-<style>
-body {
-  margin: 0;
-  padding: 0;
-}
+<style scoped>
 
 #map {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
+  border: 10px solid #f2d7b6; 
 }
 
-#closeBtn{
+.btns {
   z-index: 2;
-  position: absolute;
-  margin-left: 63%;
-  margin-top: 3%;
-  padding: 32px;
 }
 
-.marker {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-size: cover;
-}
-
-.marker.Sonne {
-  background-image: url("~@/assets/Sun_withGlow.png");
-}
-.marker.Merkur {
-  background-image: url("~@/assets/Mercury.png");
-}
-.marker.Venus {
-  background-image: url("~@/assets/Venus.png");
-}
-.marker.Erde {
-  background-image: url("~@/assets/Earth.png");
-}
-.marker.Mond {
-  background-image: url("~@/assets/Moon.png");
-}
 </style>
 
 <script>

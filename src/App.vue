@@ -298,6 +298,11 @@ a {
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
+  display: inline;
+}
+
+img {
+  width: 100%;
 }
 
 button {
@@ -338,7 +343,7 @@ button {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat;
+  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat-x;
   z-index: -1;
 }
 
@@ -366,8 +371,31 @@ button {
 .btns {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row-reverse wrap;
   justify-content: space-between;
+}
+
+.marker {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.marker.Sonne {
+  background-image: url("~@/assets/Sun_withGlow.png");
+}
+.marker.Merkur {
+  background-image: url("~@/assets/Mercury.png");
+}
+.marker.Venus {
+  background-image: url("~@/assets/Venus.png");
+}
+.marker.Mond {
+  background-image: url("~@/assets/Moon.png");
+}
+.marker.Erde {
+  background-image: url("~@/assets/Earth.png");
 }
 
 @-webkit-keyframes scroll {

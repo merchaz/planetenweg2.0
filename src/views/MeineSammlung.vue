@@ -1,11 +1,19 @@
 <template>
-  <div class="sammlung">
-    <h1>Meine Sammlung</h1>
-    <router-link to="/Planeteninfo/Sonne"><img class="planet Sonne" v-if="true" src="~@/assets/Sun_withGlow.png"></router-link>
-    <router-link to="/Planeteninfo/Merkur"><img class="planet Merkur" v-if="true" src="~@/assets/Mercury.png"></router-link>
-    <router-link to="/Planeteninfo/Venus"><img class="planet Venus" v-if="true" src="~@/assets/Venus.png"></router-link>
-    <router-link to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Earth.png"></router-link>
-    <router-link to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Moon.png"></router-link>
+  <div class="bg-wrapper">
+    <div class="stars"></div>
+    <div class="bg">
+      <div class="btns">
+        <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg"></router-link>
+      </div>
+      <h3>Meine Sammlung</h3>
+      <div class="sammlung">
+        <router-link to="/Planeteninfo/Sonne"><img class="planet Sonne" v-if="true" src="~@/assets/Sun_withGlow.png"></router-link>
+        <router-link to="/Planeteninfo/Merkur"><img class="planet Merkur" v-if="true" src="~@/assets/Mercury.png"></router-link>
+        <router-link to="/Planeteninfo/Venus"><img class="planet Venus" v-if="true" src="~@/assets/Venus.png"></router-link>
+        <router-link to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Earth.png"></router-link>
+        <router-link to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Moon.png"></router-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,24 +62,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.bg {
+  justify-content: flex-start;
 }
 
-.planet{
-  height: 80px;
-  width: 80px;
+.sammlung {
+  margin-top: 5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+
+&:after {
+  content: "";
+  flex: auto;
+}
+
+.sammlung a {
+  flex-grow: 0;
+  width: 7rem;
 }
 
 .planet.Sonne {
@@ -89,4 +101,5 @@ a {
 .planet.Mond {
   background-image: url("~@/assets/Moon.png");
 }
+
 </style>
