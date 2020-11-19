@@ -1,5 +1,7 @@
 <template>
   <div class="walking">
+    <router-link to="/showmap"><img id="mapBtn" src="~@/assets/mapBtn.svg"></router-link>
+    <router-link to="/MeineSammlung"><img id="sammlungBtn" src="~@/assets/sammlungBtn.svg"></router-link>
     <h1>Walking</h1>
     <label id="distanzLabel">51.243 Millionen km</label>
     <img id="spaceship">

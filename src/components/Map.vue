@@ -1,4 +1,5 @@
 <template>
+  <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg"></router-link>
   <div id="map"></div>
 </template>
           
@@ -13,6 +14,11 @@ body {
   top: 0;
   bottom: 0;
   width: 100%;
+}
+
+#closeBtn{
+  z-index: 2;
+  position: absolute;
 }
 
 .marker {
