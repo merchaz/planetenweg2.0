@@ -166,7 +166,7 @@ body {
   color: #F2D7B6;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   font-family: 'Emblema One', cursive;
   font-weight: 400;
   text-shadow: 3px 2px 0px #9E4C4E;
@@ -184,6 +184,9 @@ h2 {
 
 h3 {
   font-size: 46px;
+}
+h4 {
+  font-size: 36px;
 }
 
 p {
