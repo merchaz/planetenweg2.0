@@ -1,6 +1,6 @@
 <template>
   <div class="popup">
-      <button id="closeBtn" @click="closeBtnPressed">close</button>
+      <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed"></router-link>
       <img id="unlockedPlanetImg">
     <p>Du hast </p>
     <h1>{{ planetName }} </h1>
