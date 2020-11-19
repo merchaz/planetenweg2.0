@@ -37,12 +37,12 @@ export default {
     }
   },
   created: async function() {
-    console.log("created done")
+    
     let result = await contentful.getEntries(
     {content_type : "commute"}
     );
     this.commutes = result.items;
-    console.log(result)
+   
   }
 }
 </script>
