@@ -7,6 +7,12 @@
         <button id="startButton"><router-link to="/MeineSammlung">Zur Sammlung</router-link></button>
     </div>
     <img class="planet" src="../assets/planet2.svg">
+<div class="title">
+        <h3>Weltraum-</h3><br>
+        <h3>Mission</h3><br>
+        <h4>abgeschlossen!</h4><br>
+      </div>
+
   </div>
 
 </template>
@@ -42,6 +48,28 @@ export default {
     width: 50%;
     transform: rotate(25deg);
     margin-bottom: 15%;
+  }
+
+  .h3 {
+    transform: translateX(25vw);
+    transform: rotate(-20deg);
+    margin-right: 10%;
+    margin-top: 5%;
+  }
+  .h4 {
+    transform: translateX(25vw);
+    transform: rotate(-20deg);
+    margin-right: 10%;
+    margin-top: -5%;
+  }
+
+  
+  .title {
+  transform: rotate(-7.23deg);
+  margin-top: 30%;
+  margin-left: 5%;
+  /* margin-bottom: -0%; */
+  position: fixed;
   }
 
 </style>
