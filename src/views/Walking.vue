@@ -2,8 +2,8 @@
   <div class="bg-wrapper">
     <div class="bg">
       <div class="btns">
-        <a href=""><img class="sammlungBtn" src="../assets/sammlungBtn.svg"> <router-link to="/sam"></router-link></a>
-        <a href=""><img class="mapBtn" src="../assets/mapBtn.svg"> <router-link to="/loc"></router-link></a>
+        <router-link to="/showmap"><img id="mapBtn" src="~@/assets/mapBtn.svg"></router-link>
+        <router-link to="/MeineSammlung"><img id="sammlungBtn" src="~@/assets/sammlungBtn.svg"></router-link>
       </div>
       <h2 id="distanzLabel">5124300 km</h2>
       <img class="astronaut " src="../assets/astronaut.svg">
