@@ -7,11 +7,14 @@
         <a href=""><img class="closeBtn" src="../assets/closeBtn.svg"> <router-link to="/walking"></router-link></a>
       </div>
 
-      <h1>{{ msg }}</h1> <!-- Planetname -->
+     
       <img class="planetAsset">
-      <h1>{{ $route.params.planetname }}</h1>
-      <img class="logo">
-      <div class="planetdescription"></div>
+      <h1>
+        {{ myPlanet.fields.planetname }}
+      </h1>
+      <img class="logo" src="{{ myPlanet.fields.planetLogo.fields.file.url }}">
+      <div class="planetdescription">
+      </div>
 
       <div class="stars"></div>
       
@@ -30,7 +33,8 @@ export default {
 
    data: function() {
     return {
-      planet: []
+      planet: [],
+      myPlanet: {}
     };
   },
 
@@ -40,7 +44,11 @@ export default {
         content_type: "planet"
       });
     this.planet =  result.items;
-    console.log(this.planet);
+    this.myPlanet = result.items.find(obj => {
+      return obj.fields.planetname.trim().toLowerCase() === this.$route.params.planetname.trim().toLowerCase()
+    })  
+    console.log(this.myPlanet);
+    console.log(this.myPlanet.fields.planetLogo.fields.file.url)
   }
 } 
 
