@@ -1,10 +1,8 @@
 <template>
   <div class="bg-wrapper">
 
-    <div class="stars"></div>
-
-    <div class="bg">
-        <img class="planet2" src="../assets/planet2.svg">
+    <div class="bg stars">
+        <img class="planet" src="../assets/planet2.svg">
         <div class="title">
           <h2>Beginne</h2><br>
           <h3>deine</h3><br>
@@ -13,6 +11,7 @@
         <p class="paragraph">Um deine Reise im Solarsystem zu starten, musst du deine Ortnungsdienste aktivieren.</p>
         <button id="startButton"><router-link to="/Walking">Start</router-link></button>
     </div>
+
   </div>
 </template>
 
@@ -37,14 +36,6 @@ export default {
 
   .planet {
     position: fixed;
-    top: -10px;
-    right: 0;
-    width: 70vw;
-    transform: rotate(-90deg);
-  }
-
-  .planet2 {
-    position: fixed;
     top: 0;
     right: 0;
     width:75%;
@@ -58,12 +49,7 @@ export default {
 
   .paragraph {
     text-align: center;
-  }
-
-  #canvas {
-    height: 200vh;
-    width: 200vw;
-    position: fixed;
+    background-color: #173040;
   }
 
 </style>
