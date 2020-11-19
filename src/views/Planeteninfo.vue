@@ -3,16 +3,18 @@
     <div class="bg">
 
       <div class="btns">
-        <router-link to="/MeineSammlung"><img id="sammlungBtn" src="~@/assets/sammlungBtn.svg"></router-link>
-        <router-link to="/walking"><img id="closeBtn" src="~@/assets/closeBtn.svg"></router-link>
+        <router-link to="/MeineSammlung"><img class="sammlungBtn" src="../assets/sammlungBtn.svg"></router-link>
+        <router-link to="/Walking"><img class="closeBtn" src="../assets/closeBtn.svg"></router-link>
+      </div> 
+
+        <img v-if="imgUrl" class="planetImg" v-bind:src="myPlanet.fields.planetImg.fields.file.url">
+        <h1 v-if="imgUrl">{{ myPlanet.fields.planetname }}</h1>
+        <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
+
+        <div v-if="imgUrl" class="planetEntdeckung"><p>{{ myPlanet.fields.planetEntdeckung }}</p></div>
+        <div v-if="imgUrl" class="planetIntroduction"><p>{{ myPlanet.fields.planetIntroduction }}</p></div>
+        <div v-if="imgUrl" class="planetDescription"><p>{{ myPlanet.fields.planetDescription.content[0].content[0].value }}</p></div>
       </div>
-     
-      <img class="planetImg" v-bind:src="myPlanet.fields.planetImg.fields.file.url">
-      <h1>{{ myPlanet.fields.planetname }}</h1>
-      <img class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url">
-      <div class="planetEntdeckung"><p>{{ myPlanet.fields.planetEntdeckung }}</p></div>
-      <div class="planetIntroduction"><p>{{ myPlanet.fields.planetIntroduction }}</p></div>
-      <div class="planetDescription"><p>{{ myPlanet.fields.planetDescription.content[0].content[0].value }}</p></div>
 
       <div class="stars"></div>
       
@@ -23,16 +25,18 @@
 <script>
 import contentfulClient from "@/module/contentful.js";
 
+var imgUrl = "";
 export default {
   name: 'planetenView',
-  props: {
-    msg: String
-  },
+  // props: {
+  //   msg: String
+  // },
 
    data: function() {
     return {
       planet: [],
-      myPlanet: {}
+      myPlanet: {},
+      imgUrl
     };
   },
 
@@ -44,9 +48,8 @@ export default {
     this.planet =  result.items;
     this.myPlanet = result.items.find(obj => {
       return obj.fields.planetname.trim().toLowerCase() === this.$route.params.planetname.trim().toLowerCase()
-    })  
-    console.log(this.myPlanet);
-    console.log(this.myPlanet.fields.planetLogo.fields.file.url)
+    })
+    this.imgUrl = this.myPlanet.fields.planetLogo.fields.file.url;
   }
 } 
 

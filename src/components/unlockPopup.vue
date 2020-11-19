@@ -1,12 +1,13 @@
 <template>
   <div class="popup">
     <div class="bgpopup">
-      <img class="starsbackground" src="../assets/stars2.svg">
+      <!-- <img class="starsbackground" src="../assets/stars2.svg"> -->
         <div class="crossbutton">
-          <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed"></router-link>
+          <img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed">
         </div>
         <div class="planetimage">
-          <!-- <img id="unlockedPlanetImg"> -->
+          <img v-if="imgUrl" id="unlockedPlanetImg" :src="imgUrl">
+          <!-- <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url"> -->
           <!-- <img src="../assets/Moon.png"> -->
         </div>
     <div class="title">
@@ -14,17 +15,25 @@
     <h1>{{ planetName }} </h1><br>
     <h4>entdeckt</h4>
     </div>
-    <button id="mehrErfahrenBtn" @click="closeBtnPressed"><router-link to="/Planeteninfo/Sonne">Erfahre mehr</router-link></button>
+      <router-link v-if="imgUrl" :to="mehrErfahrenLink"><button style="color:#f2d7b6;" id="mehrErfahrenBtn" @click="closeBtnPressed">Erfahre mehr</button></router-link>      
     </div>
   </div>
 </template>
 
 <script>
 
+// eslint-disable-next-line no-unused-vars
+var mehrErfahrenLink = "";
+// eslint-disable-next-line no-unused-vars
+var imgUrl = "";
 export default {
   name: 'unlockPopup',
   props: {
     planetName: String
+  },
+  created: function (){
+    this.imgUrl = "../assets/" + this.planetName + ".png";
+    this.mehrErfahrenLink = "/Planeteninfo/" + this.planetName;  
   },
   methods: {
     closeBtnPressed() {

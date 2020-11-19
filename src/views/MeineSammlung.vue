@@ -19,17 +19,13 @@
 
 <script>
 var unlockedPlanets = [];
+// eslint-disable-next-line no-unused-vars
 var sonneUnl, merkurUnl, venusUnl, erdeUnl, mondUnl = false; 
 var planetenStorage = window.localStorage;
 export default {
   name: 'sammlung',
-  created () {
-    console.log(sonneUnl + merkurUnl + venusUnl + erdeUnl + mondUnl)
-  },
   mounted () {
-    this.loadUnlockedPlanets();
-    console.log(unlockedPlanets);
-    
+    this.loadUnlockedPlanets();    
   },
   data: function(){
     return unlockedPlanets },
@@ -87,19 +83,19 @@ export default {
 }
 
 .planet.Sonne {
-  background-image: url("~@/assets/Sun_withGlow.png");
+  background-image: url("~@/assets/Sonne.png");
 }
 .planet.Merkur {
-  background-image: url("~@/assets/Mercury.png");
+  background-image: url("~@/assets/Merkur.png");
 }
 .planet.Venus {
   background-image: url("~@/assets/Venus.png");
 }
 .planet.Erde {
-  background-image: url("~@/assets/Earth.png");
+  background-image: url("~@/assets/Erde.png");
 }
 .planet.Mond {
-  background-image: url("~@/assets/Moon.png");
+  background-image: url("~@/assets/Mond.png");
 }
 
 </style>
