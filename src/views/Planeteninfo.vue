@@ -19,7 +19,6 @@
       <div class="stars"></div>
       
     </div>
-  </div>
 </template>
 
 <script>

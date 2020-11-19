@@ -378,19 +378,19 @@ button {
 }
 
 .marker.Sonne {
-  background-image: url("~@/assets/Sun_withGlow.png");
+  background-image: url("~@/assets/Sonne.png");
 }
 .marker.Merkur {
-  background-image: url("~@/assets/Mercury.png");
+  background-image: url("~@/assets/Merkur.png");
 }
 .marker.Venus {
   background-image: url("~@/assets/Venus.png");
 }
 .marker.Mond {
-  background-image: url("~@/assets/Moon.png");
+  background-image: url("~@/assets/Mond.png");
 }
 .marker.Erde {
-  background-image: url("~@/assets/Earth.png");
+  background-image: url("~@/assets/Erde.png");
 }
 
 @-webkit-keyframes scroll {
