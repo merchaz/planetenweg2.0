@@ -1,6 +1,5 @@
 <template>
   <div class="bg-wrapper">
-
     <div class="bg stars">
         <img class="planet" src="../assets/planet2.svg">
         <div class="title">
@@ -49,7 +48,7 @@ export default {
 
   .paragraph {
     text-align: center;
-    background-color: #173040;
+   /*  background-color: #173040; */
   }
 
 </style>
