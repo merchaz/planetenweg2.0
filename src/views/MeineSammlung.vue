@@ -13,6 +13,7 @@
         <router-link to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Erde.png"></router-link>
         <router-link to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Mond.png"></router-link>
       </div>
+      <router-link to="/impressum">Impressum</router-link>
     </div>
   </div>
 </template>
