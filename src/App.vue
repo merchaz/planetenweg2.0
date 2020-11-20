@@ -55,7 +55,6 @@ var sonneUnl,
   venusUnl,
   erdeUnl,
   mondUnl = false;
-var test = true;
 var planetenStorage = window.localStorage;
 export default {
   components: { unlockPopup },
@@ -76,7 +75,7 @@ export default {
           (position) => {
             // Ist Benutzer bei Sonne?
             if (
-              sonneUnl == false &&
+              planetenStorage.getItem("Sonne") == null &&
               this.isInside(
                 position.coords.longitude,
                 position.coords.latitude,
@@ -88,7 +87,7 @@ export default {
             ) {
               this.unlockedPlanet = "Sonne";
               this.showModal = true;
-              this.addEntry(unlockedPlanet);
+              this.addEntry(this.unlockedPlanet);
               sonneUnl = true;
             }
 
@@ -106,7 +105,7 @@ export default {
             ) {
               this.unlockedPlanet = "Merkur";
               this.showModal = true;
-              this.addEntry(unlockedPlanet);
+              this.addEntry(this.unlockedPlanet);
               merkurUnl = true;
             }
 
@@ -124,7 +123,7 @@ export default {
             ) {
               this.unlockedPlanet = "Venus";
               this.showModal = true;
-              this.addEntry(unlockedPlanet);
+              this.addEntry(this.unlockedPlanet);
               venusUnl = true;
             }
 
@@ -142,15 +141,15 @@ export default {
             ) {
               this.unlockedPlanet = "Erde";
               this.showModal = true;
-              this.addEntry(unlockedPlanet);
+              this.addEntry(this.unlockedPlanet);
               erdeUnl = true;
             }
 
             // Testing
-            if (test && mondUnl == false) {
+            if (planetenStorage.getItem("Sonne") == null  && mondUnl == false) {
               this.unlockedPlanet = "Sonne";
               this.showModal = true;
-              this.addEntry(unlockedPlanet);
+              this.addEntry(this.unlockedPlanet);
               mondUnl = true;
             }
           },
