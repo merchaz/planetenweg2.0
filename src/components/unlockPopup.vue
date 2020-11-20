@@ -29,6 +29,7 @@
 var mehrErfahrenLink = "";
 // eslint-disable-next-line no-unused-vars
 var imgUrl = "";
+
 export default {
   name: 'unlockPopup',
   props: {
@@ -41,22 +42,13 @@ export default {
   methods: {
     closeBtnPressed() {
       this.$parent.closepopup();
+    }
   }
-}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.bg {
-  border: none;
-}
-
-.title {
-  margin-top: 70%;
-  text-align: center;
-}
 
 button {
   margin-top: 30%;
@@ -65,6 +57,15 @@ button {
 
 h2 {
   color: #54A1BF;
+}
+
+.bg {
+  border: none;
+}
+
+.title {
+  margin-top: 70%;
+  text-align: center;
 }
 
 .planetimage {
