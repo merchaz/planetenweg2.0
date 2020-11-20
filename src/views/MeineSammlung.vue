@@ -80,10 +80,6 @@ export default {
   width: 100%;
 }
 
-.impressum {
-  margin-top: 10rem;
-}
-
 .sammlung {
   margin-bottom: 5rem;
   display: flex;

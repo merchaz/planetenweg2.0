@@ -4,7 +4,7 @@
     <div class="bg">
         <img class="planet" src="../assets/planet2.svg">
         <div class="title">
-          <h2>Impressum</h2>
+          <h3>Impressum</h3>
         </div>
 
         <div class="center">
@@ -19,12 +19,12 @@
         <div class="center">
           <p><strong>Quellen:</strong></p>
           <p>
-            Spaceship | thenounproject.com<br>
+            Spaceship | thenounproject.com<br><br>
             Planeten Infos | solarsystem.nasa
           </p>
         </div>
 
-        <router-link to="/Walking"><button id="startButton" @click="startBtnPressed">Start</button></router-link>
+        <router-link to="/Walking"><button id="startButton" @click="startBtnPressed">Back</button></router-link>
     </div>
     
 
