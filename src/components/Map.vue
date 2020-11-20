@@ -48,6 +48,17 @@ export default {
       center: [8.291631, 47.068675],
       zoom: 16,
     });
+
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+        enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        showAccuracyCircle: false
+
+      }), 'top-left'
+    );
     var geojson = {
   type: "FeatureCollection",
   features: [
