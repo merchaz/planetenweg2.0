@@ -341,7 +341,7 @@ button {
   height: 100vh;
   width: 100vw;
   top: 0;
-  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat-x;
+  background: rgba(0, 0, 0, 0) 0px 0px url("./assets/stars.svg") repeat-x;
   z-index: -1;
 }
 
@@ -349,7 +349,7 @@ button {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat;
+  background: rgba(0, 0, 0, 0) 0px 0px url("./assets/stars.svg") repeat;
   -webkit-animation: scroll 3s linear infinite;
   animation: scroll 3s linear infinite;
   z-index: -1;
@@ -360,7 +360,7 @@ button {
   top: 0;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0) 0px 0px url("assets/starsTest.svg") repeat;
+  background: rgba(0, 0, 0, 0) 0px 0px url("./assets/starsTest.svg") repeat;
   -webkit-animation: scroll 30s linear infinite;
   animation: scroll 30s linear infinite;
   z-index: -1;
