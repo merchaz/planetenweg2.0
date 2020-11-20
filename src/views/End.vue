@@ -8,7 +8,7 @@
         <h3>Mission</h3><br>
         <h4>erfolgreich!</h4><br>
       </div>
-      <img class="astronaut" src="../assets/astronaut.svg">
+      <img class="astronaut" src="../assets/spaceship.svg">
       <p class="paragraph">Du hast alle Planeten unseres Sonneystems entdeckt!<br><br>Dein Weg war 5,906,380,000 km weit.<br>Für dich waren es nur 5,9 Kilometer.</p>
       <button id="startButton"><router-link to="/MeineSammlung">Zur Sammlung</router-link></button>
     </div>
