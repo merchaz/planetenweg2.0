@@ -309,7 +309,9 @@ button {
   background-color: #f2d7b6;
   color: #9e4c4e;
   font-family: "Roboto Mono", monospace;
+  font-size: 18px;
   text-decoration-line: none;
+  text-transform: uppercase;
   z-index: 10;
 }
 
@@ -338,6 +340,7 @@ button {
   position: absolute;
   height: 100vh;
   width: 100vw;
+  top: 0;
   background: rgba(0, 0, 0, 0) 0px 0px url("assets/stars.svg") repeat-x;
   z-index: -1;
 }
@@ -376,6 +379,12 @@ button {
   border-radius: 50%;
   background-size: cover;
 }
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  display: none; 
+}
+
 
 .marker.Sonne {
   background-image: url("~@/assets/Sonne.png");

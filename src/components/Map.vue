@@ -15,12 +15,17 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: border-box;
   border: 10px solid #f2d7b6; 
 }
 
 .btns {
   z-index: 2;
+}
+body{
+  transition: opacity 1s ease-in-out;
 }
 
 </style>
@@ -117,8 +122,5 @@ geojson.features.forEach(function (marker) {
 });
   }
 }
-
-
-
 
 </script>

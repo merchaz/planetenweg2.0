@@ -72,11 +72,6 @@ export default {
   width: 100%;
 }
 
-:after {
-  content: "";
-  flex: auto;
-}
-
 .sammlung a {
   flex-grow: 0;
   width: 7rem;
