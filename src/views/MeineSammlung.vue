@@ -7,11 +7,11 @@
       </div>
       <h3>Meine Sammlung</h3>
       <div class="sammlung">
-        <router-link to="/Planeteninfo/Sonne"><img class="planet Sonne" v-if="true" src="~@/assets/Sonne.png"></router-link>
-        <router-link to="/Planeteninfo/Merkur"><img class="planet Merkur" v-if="true" src="~@/assets/Merkur.png"></router-link>
-        <router-link to="/Planeteninfo/Venus"><img class="planet Venus" v-if="true" src="~@/assets/Venus.png"></router-link>
-        <router-link to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Erde.png"></router-link>
-        <router-link to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Mond.png"></router-link>
+        <router-link v-if="sonneUnl" to="/Planeteninfo/Sonne"><img class="planet Sonne" v-if="true" src="~@/assets/Sonne.png"></router-link>
+        <router-link v-if="merkurUnl" to="/Planeteninfo/Merkur"><img class="planet Merkur" v-if="true" src="~@/assets/Merkur.png"></router-link>
+        <router-link v-if="venusUnl" to="/Planeteninfo/Venus"><img class="planet Venus" v-if="true" src="~@/assets/Venus.png"></router-link>
+        <router-link v-if="erdeUnl" to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Erde.png"></router-link>
+        <router-link v-if="mondUnl" to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Mond.png"></router-link>
       </div>
     </div>
   </div>
