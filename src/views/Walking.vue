@@ -6,9 +6,9 @@
         <router-link to="/showmap"><img id="mapBtn" src="~@/assets/mapBtn.svg"></router-link>
         <router-link to="/MeineSammlung"><img id="sammlungBtn" src="~@/assets/sammlungBtn.svg"></router-link>
       </div>
-      <h2 id="distanzLabel">5124300 km</h2>
+      <h3 id="distanzLabel">5'124'300 km</h3>
       <img class="astronaut " src="../assets/spaceship.svg">
-      <h3 id="speedLabel">8000 km/h</h3>
+      <h3 id="speedLabel">8'000 km/h</h3>
       <div class="starsSlow"></div>
     </div>
     

@@ -1,14 +1,11 @@
 <template>
   <div>
     <div class="bg">
-      <!-- <img class="starsbackground" src="../assets/stars2.svg"> -->
         <div class="btns">
           <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed"></router-link>
         </div>
         <div class="planetimage">
           <img v-if="imgUrl" id="unlockedPlanetImg" :src="imgUrl">
-          <!-- <img v-if="imgUrl" class="logo" v-bind:src="myPlanet.fields.planetLogo.fields.file.url"> -->
-          <!-- <img src="../assets/Moon.png"> -->
         </div>
         <div class="title">
           <h4>Du hast </h4><br>
@@ -36,7 +33,7 @@ export default {
     planetName: String
   },
   created: function (){
-    this.imgUrl = "../assets/" + this.planetName + ".png";
+    this.imgUrl = require("../assets/" + this.planetName + ".png");
     this.mehrErfahrenLink = "/Planeteninfo/" + this.planetName;  
   },
   methods: {
