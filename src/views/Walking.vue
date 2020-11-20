@@ -7,7 +7,7 @@
         <router-link to="/MeineSammlung"><img id="sammlungBtn" src="~@/assets/sammlungBtn.svg"></router-link>
       </div>
       <h2 id="distanzLabel">5124300 km</h2>
-      <img class="astronaut " src="../assets/astronaut.svg">
+      <img class="astronaut " src="../assets/spaceship.svg">
       <h3 id="speedLabel">8000 km/h</h3>
       <div class="starsSlow"></div>
     </div>
@@ -28,9 +28,8 @@ export default {
 <style scoped>
 
   .astronaut {
-    width: 50%;
-    transform: rotate(25deg);
-    margin-top: 15%;
+    width: 25%;
+    margin-top: 20%;
   }
 
   h2, h3 {
