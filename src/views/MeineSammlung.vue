@@ -1,10 +1,13 @@
 <template>
   <div class="bg-wrapper">
-    <div class="stars"></div>
-    <div class="bg">
-      <div class="btns">
+
+    <div class="btns">
         <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg"></router-link>
       </div>
+
+    <div class="stars"></div>
+
+    <div class="bg">
       <h3>Meine Sammlung</h3>
       <div class="sammlung">
         <router-link to="/Planeteninfo/Sonne"><img class="planet Sonne" v-if="true" src="~@/assets/Sonne.png"></router-link>
@@ -13,8 +16,9 @@
         <router-link to="/Planeteninfo/Erde"><img class="planet Erde" v-if="true" src="~@/assets/Erde.png"></router-link>
         <router-link to="/Planeteninfo/Mond"><img class="planet Mond" v-if="true" src="~@/assets/Mond.png"></router-link>
       </div>
-      <router-link to="/impressum">Impressum</router-link>
+      <router-link class="impressum" to="/impressum">Impressum</router-link>
     </div>
+    
   </div>
 </template>
 
@@ -60,12 +64,28 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.bg-wrapper {
+  border: 10px solid;
+  padding: 32px;
+}
+
 .bg {
-  justify-content: flex-start;
+  border: none;
+  padding: 0;
+  height: 90%;
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+}
+
+.impressum {
+  margin-top: 10rem;
 }
 
 .sammlung {
-  margin-top: 5rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
