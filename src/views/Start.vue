@@ -52,7 +52,7 @@ export default {
 
   .title {
     transform: rotate(-7.23deg);
-    margin-top: 40%;
+    margin-top: 35%;
     margin-bottom: 40%;
   }
 

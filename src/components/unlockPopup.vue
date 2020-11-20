@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <div class="bg">
         <div class="btns">
           <router-link to="/Walking"><img id="closeBtn" src="~@/assets/closeBtn.svg" @click="closeBtnPressed"></router-link>
@@ -48,7 +48,7 @@ export default {
 <style scoped>
 
 button {
-  margin-top: 30%;
+  margin-top: 60%;
   color: #9E4C4E!important;
 }
 
@@ -58,22 +58,20 @@ h2 {
 
 .bg {
   border: none;
+  position: absolute;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .title {
-  margin-top: 70%;
+  margin-top: 10%;
   text-align: center;
 }
 
-.planetimage {
-  border: aqua;
-  border: #F2D7B6 1px solid;
-  position: absolute;
-}
-
-.stars{
-  margin-left: -32px;
-  margin-top: -32px;
+.stars {
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
 }
 
 </style>
