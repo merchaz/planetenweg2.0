@@ -58,7 +58,6 @@ h2 {
 
 .bg {
   border: none;
-  position: absolute;
   height: 100%;
   justify-content: space-between;
 }
