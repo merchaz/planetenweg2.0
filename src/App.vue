@@ -352,6 +352,7 @@ button {
   -webkit-animation: scroll 3s linear infinite;
   animation: scroll 3s linear infinite;
   z-index: -1;
+  opacity: 1!important;
 }
 
 .starsSlow {
@@ -363,6 +364,7 @@ button {
   -webkit-animation: scroll 30s linear infinite;
   animation: scroll 30s linear infinite;
   z-index: -1;
+  opacity: 1!important;
 }
 
 .btns {
